@@ -4,6 +4,8 @@ from typing import List, Dict
 
 from src.utils import UrlBundler, Key
 
+
+
 class Requester():
     """
         Requester for handling common task
@@ -18,6 +20,14 @@ class Requester():
                                     headers={"CK":self.Key.key})
         return json.loads(response.text)
 
-    def getDevicesOfProject(self):
-        response = requests.request("GET",
-                                    )
+    def getDevicesOfProject(self, MyStorage):
+        print()
+
+        for i in list(MyStorage.storage["ProjectData"].keys()):
+            keys = MyStorage.storage["ProjectData"][i]["keys"]
+            for j in keys:
+
+                response = requests.request("GET",
+                                            self.UB.getDevicesOfProj,
+                                            headers={"CK":j})
+                print(response.text)
