@@ -1,0 +1,6 @@
+
+臺北市停車場資料服務 (記得後面要加參數 ?$format=JSON 不然會回傳XML)
+https://traffic.transportdata.tw/MOTC/v1/Parking/OffStreet/CarPark/City/Taipei
+
+臺北市停車場剩餘位資料服務 (是即時資料呦)
+https://traffic.transportdata.tw/MOTC/v1/Parking/OffStreet/ParkingAvailability/City/Taipei
